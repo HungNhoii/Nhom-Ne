@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-int kq=0;
 int tong(int a, int b);
 int hieu(int a, int b);
 int tich(int a, int b);
