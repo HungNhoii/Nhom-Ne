@@ -1,7 +1,15 @@
 #include <iostream>
 using namespace std;
-int tong(int a, int b);
-int hieu(int a, int b);
+int tong(int a, int b){
+	int tong=0;
+	tong=a+b;
+	return tong;
+}
+int hieu(int a, int b){
+	int hieu=0;
+	hieu=a-b;
+	return hieu;	
+}
 int tich(int a, int b);
 float thuong(int a, int b);
 int main()
@@ -15,10 +23,10 @@ int main()
 	switch (phepToan)
 	{
 	case '+':
-		cout<<"Tong la:"<<a+b<<endl;
+		
 		break;
 	case '-':
-		cout<<"Hieu la:"<<a-b<<endl;
+		
 		break;
 	case '*':
 		
