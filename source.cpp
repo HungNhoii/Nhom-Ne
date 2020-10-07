@@ -10,14 +10,21 @@ int hieu(int a, int b){
 	hieu=a-b;
 	return hieu;	
 }
-int tich(int a, int b);
 int tich(int a, int b)
 {
 	int tich=1;
 	tich=a*b;
 	return tich;
 }
-float thuong(int a, int b);
+float thuong(int a, int b)
+{
+	float thuong=0;
+	if (b==0)
+		cout<<"Error";
+	else
+		thuong=float(a/b);
+	return thuong;
+}
 int main()
 {
 	int a, b;
@@ -29,19 +36,16 @@ int main()
 	switch (phepToan)
 	{
 	case '+':
-<<<<<<< HEAD
-		cout<<"Tong" <<a<<"+"<<b<<" la:"<<a+b<<endl;
-=======
-		
->>>>>>> 2f0b04a8ca8e0a35787dcd87d90202f0f6bf2a0b
+		cout<<"Tong"<<a<<" + "<<b<<"la: "<<tong(a,b)<<endl;
 		break;
 	case '-':
-		
+		cout<<"Hieu"<<a<<" - "<<b<<"la: "<<hieu(a,b)<<endl;
 		break;
 	case '*':
+		cout<<"Tich"<<a<<" * "<<b<<"la: "<<tich(a,b)<<endl;
 		break;
 	case '/':
-
+		cout<<"Thuong"<<a<<" / "<<b<<"la: "<<thuong(a,b)<<endl;
 		break;
 	default:
 		cout << "Chon sai phep toan";
