@@ -25,31 +25,21 @@ float thuong(int a, int b)
 		thuong=float(a/b);
 	return thuong;
 }
+float cvdtHV(float canh) {
+	float chuvi, dientich;
+	chuvi = canh * 4;
+	dientich = canh * canh;
+	cout << "chu vi hinh vuong:" << chuvi << endl << "dien tich hinh vuong:" << dientich;
+}
+
+
 int main()
 {
 	int a, b;
 	char phepToan;
 	cout << "Nhap 2 so nguyen: ";
 	cin >> a >> b;
-	cout << "Tinh gi? (+,-,*,/) ";
-	cin >> ch;
-	switch (phepToan)
-	{
-	case '+':
-		cout<<"Tong"<<a<<" + "<<b<<"la: "<<tong(a,b)<<endl;
-		break;
-	case '-':
-		cout<<"Hieu"<<a<<" - "<<b<<"la: "<<hieu(a,b)<<endl;
-		break;
-	case '*':
-		cout<<"Tich"<<a<<" * "<<b<<"la: "<<tich(a,b)<<endl;
-		break;
-	case '/':
-		cout<<"Thuong"<<a<<" / "<<b<<"la: "<<thuong(a,b)<<endl;
-		break;
-	default:
-		cout << "Chon sai phep toan";
-		break;
-	}
+	cout << a << "+" << B << "=" << tong(a, b) << endl;
+	
 	return 0;
 }
