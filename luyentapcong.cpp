@@ -15,7 +15,6 @@ void kiemTraLuyenTapCong()
 }
 int main()
 {
-	
 	kiemTraLuyenTapCong();
 	return 0;
 }
