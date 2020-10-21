@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#define PI 3.14;
 int tong(int a, int b) {
 	int tong = 0;
 	tong = a + b;
@@ -25,28 +26,42 @@ float thuong(int a, int b)
 		thuong = float(a / b);
 	return thuong;
 }
-<<<<<<< HEAD
 float cvdtHV(float canh) {
 	float chuvi, dientich;
+}
+int cvdtHV(float chuvi,float dientich,int canh) {
+	cout << "nhap canh ";
+	cin >> canh;
 	chuvi = canh * 4;
 	dientich = canh * canh;
 	cout << "chu vi hinh vuong:" << chuvi << endl << "dien tich hinh vuong:" << dientich;
 }
-=======
->>>>>>> b8fe1102a1f0a7c3ece110eb50847edcaa7148e7
 
+int cvdthHCN(float chuvi, float dientich, int a, int b) {
+	
+	cout << "nhap vao a:";
+	cin >> a;
+	cout << "nhap b:";
+	cin >> b;
+	chuvi = (a + b) * 2;
+	dientich = a * b;
+	cout << "chu vi hinh chu nhat:" << chuvi << endl << "dien tich hinh chu nhat:" << dientich;
+
+}
+int cvdtHT(float chuvi,float dientich, int r) {
+	
+	cout << "nhap vao r:";
+	chuvi = 2 * r*PI;
+	dientich = PI *r*r;
+
+}
 
 int main()
 {
-<<<<<<< HEAD
 	int a, b;
-	char phepToan;
 	cout << "Nhap 2 so nguyen: ";
 	cin >> a >> b;
-	cout << a << "+" << B << "=" << tong(a, b) << endl;
-	
-	return 0;
-=======
+
 	int luachon;
 	cout << "1. Cong, tru, nhan, chia 2 so." << endl;
 	switch (luachon)
@@ -62,5 +77,6 @@ int main()
 	default:
 		break;
 	}
->>>>>>> b8fe1102a1f0a7c3ece110eb50847edcaa7148e7
+
+	return 0;
 }
