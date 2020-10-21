@@ -1,82 +1,88 @@
 #include <iostream>
 using namespace std;
-#define PI 3.14;
-int tong(int a, int b) {
-	int tong = 0;
-	tong = a + b;
-	return tong;
+
+int tong(int a, int b)
+{
+	return a + b;
 }
-int hieu(int a, int b) {
-	int hieu = 0;
-	hieu = a - b;
-	return hieu;
+int hieu(int a, int b)
+{
+	return a - b;
 }
 int tich(int a, int b)
 {
-	int tich = 1;
-	tich = a * b;
-	return tich;
+	return a * b;
 }
 float thuong(int a, int b)
 {
-	float thuong = 0;
-	if (b == 0)
-		cout << "Error";
-	else
-		thuong = float(a / b);
-	return thuong;
-}
-float cvdtHV(float canh) {
-	float chuvi, dientich;
-}
-int cvdtHV(float chuvi,float dientich,int canh) {
-	cout << "nhap canh ";
-	cin >> canh;
-	chuvi = canh * 4;
-	dientich = canh * canh;
-	cout << "chu vi hinh vuong:" << chuvi << endl << "dien tich hinh vuong:" << dientich;
+	return a*1.0 / b;
 }
 
-int cvdthHCN(float chuvi, float dientich, int a, int b) {
-	
-	cout << "nhap vao a:";
-	cin >> a;
-	cout << "nhap b:";
-	cin >> b;
-	chuvi = (a + b) * 2;
-	dientich = a * b;
-	cout << "chu vi hinh chu nhat:" << chuvi << endl << "dien tich hinh chu nhat:" << dientich;
-
-}
-int cvdtHT(float chuvi,float dientich, int r) {
-	
-	cout << "nhap vao r:";
-	chuvi = 2 * r*PI;
-	dientich = PI *r*r;
-
+float chuViHinhVuong(float canh)
+{
+	return canh*4;
 }
 
+float dienTichHinhVuong(float canh)
+{
+	return canh*canh;
+}
+float chuViHinhChuNhat(float dai, float rong)
+{
+	return (dai+rong)*2;
+}
+float dienTichHinhChuNhat(float dai, float rong)
+{
+	return dai*rong;
+}
+
+float chuViHinhTron(float bankinh)
+{
+	return 2*bankinh*3.14;
+}
+
+float dienTichHinhTron(float bankinh)
+{
+	return bankinh*bankinh*3.14;
+}
 int main()
 {
 	int a, b;
-	cout << "Nhap 2 so nguyen: ";
+	cout << "Nhap 2 so tu nhien: ";
 	cin >> a >> b;
-
+	cout << "Tong = " << tong(a, b) << endl;
+	cout << "Hieu = " << hieu(a, b) << endl;
+	cout << "Tich = " << tich(a, b) << endl;
+	if (b == 0)
+		cout << "so chia phai khac 0.";
+	else
+		cout << "Thuong = " << thuong(a, b) << endl;
 	int luachon;
-	cout << "1. Cong, tru, nhan, chia 2 so." << endl;
-	switch (luachon)
+	cout<<"1.Tinh chu vi dien tich hinh vuong."<<endl;
+	cout<<"2.Tinh chu vi dien tich hinh chu nhat."<<endl;
+	cout<<"3.Tinh chu vi dien tich hinh tron."<<endl;
+	cout<<"Nhap lua chon: ";
+	cin>>luachon;
+	switch(luachon)
 	{
-	case 1:
-		int a, b;
-		cout << "Nhap 2 so nguyen: ";
-		cin >> a >> b;
-		cout << a << " + " << b << " = " << tong(a, b) << endl;
-		cout << a << " - " << b << " = " << hieu(a, b) << endl;
-		cout << a << " x " << b << " = " << tich(a, b) << endl;
-		cout << a << " / " << b << " = " << thuong(a, b) << endl;
-	default:
-		break;
+		case 1:
+			int canh;
+			cout<<"Nhap chieu dai canh hinh vuong: ";
+			cin>>canh;
+			cout<<"Chu vi = "<<chuViHinhVuong(canh)<<"; Dien tich = "<<dienTichHinhVuong(canh);
+			break;
+		case 2:
+			int dai, rong;
+			cout<<" Nhap chieu dai 2 canh hinh chu nhat: ";
+			cin>>dai>>rong;
+			cout<<"Chu vi = "<<chuViHinhChuNhat(dai,rong)<<"; Dien tich = "<<dienTichHinhChuNhat(dai,rong);
+			break;
+		case 3:
+			int bankinh;
+			cout<<"Nhap chieu dai ban kinh hinh tron: ";
+			cin>>bankinh;
+			cout<<"Chu vi = "<<chuViHinhTron(bankinh)<<"; Dien tich = "<<dienTichHinhTron(bankinh);
+			break;
 	}
-
 	return 0;
 }
