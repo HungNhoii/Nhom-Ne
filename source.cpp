@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 int tong(int a, int b)
 {
 	return a + b;
@@ -45,6 +44,13 @@ float dienTichHinhTron(float bankinh)
 {
 	return bankinh*bankinh*3.14;
 }
+int soNgauNhien{
+	int r;
+	for (int i = 0; i <= 100; i++)
+		r = rand() % 100;
+	return r;
+}
+
 int main()
 {
 	int a, b;
@@ -84,5 +90,21 @@ int main()
 			cout<<"Chu vi = "<<chuViHinhTron(bankinh)<<"; Dien tich = "<<dienTichHinhTron(bankinh);
 			break;
 	}
+	int x = soNgauNhien();
+	int y = soNgauNhien();
+	cout << "So ngau nhien thu nhat la: " << soNgauNhien() << endl;
+	cout << "So ngau nhien thu nhat la: " << soNgauNhien() << endl;
+	int hieuDuDoan;
+	cout << "Hieu du doan cua ban la: " << endl;
+	cin >> hieuDuDoan;
+	if (hieuDuDoan == hieu(x - y))
+		cout << "Du doan dung!";
+	else
+		cout << "Du doan sai!";
+	cout << x << " - " << y" = " << hieu(x - y) << " Khac hieu du doan " << hieuDuDoan;
+
 	return 0;
 }
+
+
+
